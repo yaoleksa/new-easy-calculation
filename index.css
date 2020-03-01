@@ -1,3 +1,47 @@
+#uppericon {
+    width: 90px;
+    height: 90px;
+}
+
 body {
     background-color: yellowgreen;
+}
+
+#emblem {
+    width:180px;
+    height:180px;
+}
+
+h1 {
+    font-size: 70px;
+    text-align: center;
+    color: red;
+    font-family: 'Segoe UI';
+}
+
+nav{
+    text-align: center;
+    text-decoration: none;
+}
+
+nav span a {
+color: black;
+font-weight: bold;
+font-size: 35px;
+margin: 15px;
+}
+nav span a:hover {
+    color:royalblue;
+}
+
+article {
+    font-size: 25px;
+    margin: 10%;
+}
+#reference {
+    margin: 5%;
+    color: lightskyblue;
+}
+#reference:hover {
+    color: royalblue;
 }
