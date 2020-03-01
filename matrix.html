@@ -5,33 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Easy calculation: Matrix</title>
+    <link id="uppericon" rel="shortcut icon" href="images/alternative.png" type="image/x-icon">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
 <header>
 
-<h1>Easy Calculation</h1>
+<section class="cap">
+
+<h1>easy calculation:</h1>
+
+<p class="explanation">fast online calculator</p>
+
+</section>
+
 
     <a href="index.html" target="_blank">
 
-    <img src="images/imgonline-com-ua-Shape-sgPAOo6VRnrxqU.png" alt="Emblem" style="width:180px;height:180px;">
+    <img id="emblem" src="images/imgonline-com-ua-Shape-sgPAOo6VRnrxqU.png" 
+
+    alt="Emblem">
 
     </a>
     
 </header>
 
-    <div>
+    <nav>
+
+    <span class="uppertab"><a href="function.html" target="_blank">Function</a></span>
+
+    <span class="uppertab"><a href="convector.html" target="_blank">
+    Convector</a></span>
 
     <span class="uppertab"><a href="matrix.html">Matrix</a></span>
-    <span class="uppertab"><a href="function.html" target="_blank">Function</a></span>
-    <span class="uppertab"><a href="convector.html" target="_blank">Convector</a></span>
+    
     <span class="uppertab"><a href="sequence.html" target="_blank">Sequences</a></span>
 
-    </div>
+    </nav>
 
         <h2>Matrix</h2>
-
-        <h3>Input</h3><br>
 
     <form > 
 
@@ -39,7 +51,9 @@
 
     <label for="columns">Columns: </label><input type="number" id="columns"><br>
 
-    <input type="number"> <input type="number">
+    <p class="caption">Input: </p>
+
+    <input type="number"> <input type="number"> <br>
     <input type="number"> <input type="number"> <br>
 
     <select>
@@ -66,16 +80,11 @@
 
     <input type="submit" value="Calculate">
 
+    <p class="caption">Result: </p>
+
+    <output name="result"><textarea placeholder="Resulting matrix"></textarea> </output>
+
     </form>
-
-    <h3>Result:</h3><br>
-
-    <div>
-
-    <input type="number"> <input type="number">
-    <input type="number"> <input type="number"> <br>
-
-    </div>
 
 </body>
 </html>

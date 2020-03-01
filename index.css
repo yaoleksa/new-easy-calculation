@@ -3,6 +3,21 @@
     height: 90px;
 }
 
+.cap {
+    color: red;
+    text-align: center;
+    font-family: 'Segoe UI';
+}
+
+h1 {
+    font-size: 70px;
+}
+
+.explanation {
+    
+    font-size: 57px;
+}
+
 body {
     background-color: yellowgreen;
 }
@@ -10,13 +25,6 @@ body {
 #emblem {
     width:180px;
     height:180px;
-}
-
-h1 {
-    font-size: 70px;
-    text-align: center;
-    color: red;
-    font-family: 'Segoe UI';
 }
 
 nav{
@@ -34,14 +42,33 @@ nav span a:hover {
     color:royalblue;
 }
 
+h2 {
+    color: red;
+    text-align: center;
+    font-family: 'Segoe UI';
+}
+
 article {
     font-size: 25px;
     margin: 10%;
 }
-#reference {
+.reference {
     margin: 5%;
     color: lightskyblue;
 }
-#reference:hover {
+.reference:hover {
     color: royalblue;
+}
+
+.caption {
+    color: red;
+    font-family: 'Segoe UI';
+    font-size: 25px;
+    font-weight: bold;
+}
+
+form {
+    margin-left: 10%;
+    margin-top: 10%;
+    margin-bottom: 25%;
 }
