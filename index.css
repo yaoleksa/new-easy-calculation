@@ -72,3 +72,10 @@ form {
     margin-top: 10%;
     margin-bottom: 25%;
 }
+
+.graph {
+    border: 1px solid grey;
+    height: 590px;
+    width: 590px;
+    background-color: white;
+}
