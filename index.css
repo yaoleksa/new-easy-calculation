@@ -22,6 +22,7 @@ h1 {
 body {
     max-width: 900px;
     margin: auto;
+    text-shadow: rgb(0, 255, 21) 1px 0 10px;
 }
 html {
     background-image: url('images/background-icon.PNG');
@@ -93,14 +94,9 @@ form {
 span.uppertab a {
     text-decoration: none;
 }
-body, article, header {
-    background-color: lightgreen;
+article p,div {
+    text-shadow: 1px 0 10px darkorange;
 }
-header {
-    border: 0;
-    background-color: lightgreen;
-}
-.reference {
-    margin-bottom: 10px;
-    margin-top: 0;
+article div {
+    font-weight: bold;
 }
