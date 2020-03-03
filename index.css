@@ -1,3 +1,4 @@
+@import url('"https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope&display=swap"');
 #uppericon {
     width: 90px;
     height: 90px;
@@ -6,7 +7,7 @@
 .cap {
     color: red;
     text-align: center;
-    font-family: 'Segoe UI';
+    font-family: 'Annie Use Your Telescope', cursive;
 }
 
 h1 {
@@ -19,15 +20,21 @@ h1 {
 }
 
 body {
-    background-color: yellowgreen;
+    background-image: url('images/background-icon.PNG');
+    max-width: 900px;
+    margin: auto;
 }
+body::after{
 
+}
 #emblem {
     width:180px;
     height:180px;
 }
 
 nav{
+    font-family: 'Helvetica';
+    font-style: italic;
     text-align: center;
     text-decoration: none;
 }
@@ -45,7 +52,7 @@ nav span a:hover {
 h2 {
     color: red;
     text-align: center;
-    font-family: 'Segoe UI';
+    font-family: 'Annie Use Your Telescope', cursive;
 }
 
 article {
@@ -62,7 +69,7 @@ article {
 
 .caption {
     color: red;
-    font-family: 'Segoe UI';
+    font-family: 'Annie Use Your Telescope', cursive;
     font-size: 25px;
     font-weight: bold;
 }
@@ -78,4 +85,13 @@ form {
     height: 590px;
     width: 590px;
     background-color: white;
+}
+.uppertab {
+    display: inline-block;
+    border: 1px solid black;
+    background-color: yellow;
+    border-radius: 10px/50%;
+}
+span.uppertab a {
+    text-decoration: none;
 }
