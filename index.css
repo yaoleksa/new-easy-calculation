@@ -20,12 +20,11 @@ h1 {
 }
 
 body {
-    background-image: url('images/background-icon.PNG');
     max-width: 900px;
     margin: auto;
 }
-body::after{
-
+html {
+    background-image: url('images/background-icon.PNG');
 }
 #emblem {
     width:180px;
@@ -38,7 +37,6 @@ nav{
     text-align: center;
     text-decoration: none;
 }
-
 nav span a {
 color: black;
 font-weight: bold;
@@ -94,4 +92,15 @@ form {
 }
 span.uppertab a {
     text-decoration: none;
+}
+body, article, header {
+    background-color: lightgreen;
+}
+header {
+    border: 0;
+    background-color: lightgreen;
+}
+.reference {
+    margin-bottom: 10px;
+    margin-top: 0;
 }
