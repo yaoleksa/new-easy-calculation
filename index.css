@@ -1,4 +1,41 @@
 @import url("https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope&display=swap");
+html {
+    background-image: url('images/background-icon.PNG');
+}
+body {
+    max-width: 900px;
+    margin: auto;
+    text-shadow: rgb(0, 255, 21) 1px 0 10px;
+}
+nav{
+    font-family: 'Helvetica';
+    font-style: italic;
+    text-align: center;
+    text-decoration: none;
+}
+nav span a {
+    color: black;
+    font-weight: bold;
+    font-size: 35px;
+    margin: 15px;
+}
+nav span a:hover {
+    color:royalblue;
+}
+article {
+    font-size: 25px;
+    margin: 10%;
+}
+article p,div {
+    text-shadow: 1px 0 10px darkorange;
+}
+article div {
+    font-weight: bold;
+}
+h1 {
+    font-size: 95px;
+    margin-bottom: 0;
+}
 #uppericon {
     width: 90px;
     height: 90px;
@@ -10,44 +47,14 @@
     font-family: 'Annie Use Your Telescope', cursive;
 }
 
-h1 {
-    font-size: 95px;
-    margin-bottom: 0;
-}
-
 .explanation {
     margin-top: 0;
     font-size: 57px;
     font-weight: bold;
 }
-
-body {
-    max-width: 900px;
-    margin: auto;
-    text-shadow: rgb(0, 255, 21) 1px 0 10px;
-}
-html {
-    background-image: url('images/background-icon.PNG');
-}
 #emblem {
     width:180px;
     height:180px;
-}
-
-nav{
-    font-family: 'Helvetica';
-    font-style: italic;
-    text-align: center;
-    text-decoration: none;
-}
-nav span a {
-color: black;
-font-weight: bold;
-font-size: 35px;
-margin: 15px;
-}
-nav span a:hover {
-    color:royalblue;
 }
 
 h2 {
@@ -56,11 +63,6 @@ h2 {
     font-family: 'Annie Use Your Telescope', cursive;
     font-weight: bold;
     font-size: 57px;
-}
-
-article {
-    font-size: 25px;
-    margin: 10%;
 }
 .reference {
     margin: 5%;
@@ -97,10 +99,4 @@ form {
 }
 span.uppertab a {
     text-decoration: none;
-}
-article p,div {
-    text-shadow: 1px 0 10px darkorange;
-}
-article div {
-    font-weight: bold;
 }
