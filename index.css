@@ -12,6 +12,16 @@ nav{
     font-style: italic;
     text-align: center;
     text-decoration: none;
+    display: inline-block;
+}
+nav span {
+    position: relative;
+    width: max-content;
+    top: -95px;
+    left: 130px;
+}
+nav img {
+    position: relative;
 }
 nav span a {
     color: black;
@@ -99,25 +109,4 @@ form {
 }
 span.uppertab a {
     text-decoration: none;
-}
-@media (min-width: 500px) {
-    nav {
-        position: relative;
-        top: -113px;
-        left: 160px;
-    }
-}
-@media (max-width: 500px) {
-    nav {
-        display: block;
-        width: min-content;
-        position: relative;
-        top: -177px;
-        left: 185px;
-    }
-    section h1, p {
-        display: flex;
-        justify-content: center;
-        width: min-content;
-    }
 }
