@@ -34,47 +34,31 @@
                 </span>
             </div>
         </nav>
-
-	<h2>Sequences</h2>
-
-	<form>
-
-		<p class="caption">Input</p>
-
-		<label for="stype">Sequence type:</label>
-
-		<select id="stype">
-
-    <option value="multiplicate">Prime numbers</option>
-
-    <option value="add">Nonprime numbers</option>
-
-    <option value="range">Fibonacci sequences</option>
-
-    <option value="determinant">Recamán's sequence</option>
-
-    <option value="subtract">The Catalan numbers</option>
-
-    <option value="power">Perfect numbers</option>
-
-    <option value="transpone">Euler totient</option>
-
-    <option value="of num">One more sequence</option>
-
-    <option value="convert">One more sequence</option>
-
-    </select><br>
-
-		<label for="laste">Last element: </label><input type="number" id="laste"><br>
-
-		<input type="submit" value="Calculate"><br>
-
-		<p class="caption">Result: </p>
-
-		<output name="result"><textarea placeholder="Elements of sequence: "></textarea></output>
-
-	</form>
-
-</body>
-
+        <h2>Sequences</h2>
+        <form>
+            <p class="caption">Input</p>
+            <label for="stype">Sequence type:</label>
+            <select id="stype">
+                <option value="multiplicate">Prime numbers</option>
+                <option value="add">Nonprime numbers</option>
+                <option value="range">Fibonacci sequences</option>
+                <option value="determinant">Recamán's sequence</option>
+                <option value="subtract">The Catalan numbers</option>
+                <option value="power">Perfect numbers</option>
+                <option value="transpone">Euler totient</option>
+                <option value="of num">One more sequence</option>
+                <option value="convert">One more sequence</option>
+            </select>
+            <br>
+            <label for="laste">Last element: </label>
+            <input type="number" id="laste">
+            <br>
+            <input type="submit" value="Calculate">
+            <br>
+            <p class="caption">Result: </p>
+            <output name="result">
+                <textarea placeholder="Elements of sequence: "></textarea>
+            </output>
+        </form>
+    </body>
 </html>

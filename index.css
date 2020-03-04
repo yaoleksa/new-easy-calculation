@@ -99,12 +99,14 @@ form {
     height: 100%;
     width: 80%;
     background-color: white;
+    margin-right: 25px;
 }
 .uppertab {
     display: inline-block;
     border: 1px solid black;
     background-color: yellow;
     border-radius: 10px/50%;
+    margin: 11px;
 }
 span.uppertab a {
     text-decoration: none;
@@ -123,5 +125,6 @@ span.uppertab a {
             height: 590px;
             width: 590px;
             background-color: white;
+            margin-right: 25px;
         }
 }

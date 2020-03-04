@@ -34,32 +34,25 @@
                 </span>
             </div>
         </nav>
-
-	<h2>Function</h2>
-
-	<form>
-
-		<p class="caption">Input</p>
-
-		<label for="f(x)">f(x)= </label><input type="text" id="f(x)" placeholder="1.2*x+4.9"><br>
-		<label for="beginning">Beginning: </label><input type="number" id="beginning"><br>
-		<label for="end">End: </label><input type="number" id="end"><br>
-
-		<input type="submit" value="Calculate"><br>
-
-		<p class="caption">Result</p>
-
-		<p class="caption">Graph</p>
-
-		<output name="result">
-
-			<textarea placeholder="Here will be table with result: "></textarea>
-
-			<svg class="graph"></svg>
-		</output>
-
-	</form>
-
-</body>
-
+        <h2>Function</h2>
+        <form>
+            <p class="caption">Input</p>
+            <label for="f(x)">f(x)= </label>
+            <input type="text" id="f(x)" placeholder="1.2*x+4.9">
+            <br>
+            <label for="beginning">Beginning: </label>
+            <input type="number" id="beginning">
+            <br>
+            <label for="end">End: </label>
+            <input type="number" id="end">
+            <br>
+            <input type="submit" value="Calculate">
+            <br>
+            <p class="caption">Result</p>
+            <output name="result">
+                <textarea placeholder="Here will be table with result: "></textarea>
+                <svg class="graph" name="Graph"></svg>
+            </output>
+        </form>
+    </body>
 </html>
