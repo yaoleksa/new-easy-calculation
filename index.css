@@ -15,13 +15,12 @@ nav{
     display: inline-block;
 }
 nav span {
-    position: relative;
-    width: max-content;
-    top: -95px;
-    left: 130px;
+    text-shadow: rgb(0, 255, 21) 1px 0 10px;
+    margin-left: 15px;
 }
-nav img {
-    position: relative;
+nav img{
+    margin-bottom: 15px;
+    margin-left: 15px;
 }
 nav span a {
     color: black;
@@ -97,8 +96,8 @@ form {
 
 .graph {
     border: 1px solid grey;
-    height: 590px;
-    width: 590px;
+    height: 100%;
+    width: 80%;
     background-color: white;
 }
 .uppertab {
@@ -109,4 +108,20 @@ form {
 }
 span.uppertab a {
     text-decoration: none;
+}
+@media (min-width: 500px) {
+        nav img {
+        display: flex;
+        justify-content: space-around;
+        }
+        nav span {
+            display: flex;
+            justify-content: space-around;
+        }
+        .graph {
+            border: 1px solid grey;
+            height: 590px;
+            width: 590px;
+            background-color: white;
+        }
 }
