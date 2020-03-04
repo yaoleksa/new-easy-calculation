@@ -1,4 +1,4 @@
-@import url('"https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope&display=swap"');
+@import url("https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope&display=swap");
 #uppericon {
     width: 90px;
     height: 90px;
@@ -11,12 +11,14 @@
 }
 
 h1 {
-    font-size: 70px;
+    font-size: 95px;
+    margin-bottom: 0;
 }
 
 .explanation {
-    
+    margin-top: 0;
     font-size: 57px;
+    font-weight: bold;
 }
 
 body {
@@ -52,6 +54,8 @@ h2 {
     color: red;
     text-align: center;
     font-family: 'Annie Use Your Telescope', cursive;
+    font-weight: bold;
+    font-size: 57px;
 }
 
 article {
