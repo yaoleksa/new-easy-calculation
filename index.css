@@ -100,3 +100,24 @@ form {
 span.uppertab a {
     text-decoration: none;
 }
+@media (min-width: 500px) {
+    nav {
+        position: relative;
+        top: -113px;
+        left: 160px;
+    }
+}
+@media (max-width: 500px) {
+    nav {
+        display: block;
+        width: min-content;
+        position: relative;
+        top: -177px;
+        left: 185px;
+    }
+    section h1, p {
+        display: flex;
+        justify-content: center;
+        width: min-content;
+    }
+}
