@@ -38,23 +38,24 @@
         <form>
             <p class="caption">Input</p>
             <label for="imeasure">Input measure: </label>
-            <input type="text" id="imeasure">
+            <input type="text" id="imeasure" class="imeasure">
             <br>
             <label for="omeasure">Output measure: </label>
-            <input type="text" id="omeasure">
+            <input type="text" id="omeasure" class="omeasure">
             <br>
             <label for="cofficient">Cofficient: </label>
-            <input type="number" id="cofficient">
+            <input type="number" id="cofficient" class="coefficient">
             <br>
             <label for="amount">Amount: </label>
-            <input type="number" id="amount">
+            <input type="number" id="amount" class="amount">
             <br>
-            <input type="submit" value="Calculate">
+            <input type="button" value="Calculate" class="get_res">
             <br>
             <p class="caption">Result: </p>
             <output name="result">
-                <textarea placeholder="Here will be result of conversion:  "></textarea>
+                <textarea placeholder="Here will be result of conversion:  " class="res_calc"></textarea>
             </output>
         </form>
+        <script src="convector.js"></script>
     </body>
 </html>
