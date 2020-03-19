@@ -38,27 +38,28 @@
         <form>
             <p class="caption">Input</p>
             <label for="stype">Sequence type:</label>
-            <select id="stype">
-                <option value="multiplicate">Prime numbers</option>
-                <option value="add">Nonprime numbers</option>
-                <option value="range">Fibonacci sequences</option>
-                <option value="determinant">Recamán's sequence</option>
-                <option value="subtract">The Catalan numbers</option>
-                <option value="power">Perfect numbers</option>
-                <option value="transpone">Euler totient</option>
-                <option value="of num">One more sequence</option>
-                <option value="convert">One more sequence</option>
+            <select class="stype">
+                <option value="prime">Prime numbers</option>
+                <option value="nonprime">Nonprime numbers</option>
+                <option value="fibonacci">Fibonacci sequences</option>
+                <option value="recaman">Recamán's sequence</option>
+                <option value="catalan">The Catalan numbers</option>
+                <option value="perfect">Perfect numbers</option>
+                <option value="totient">Euler totient</option>
+                <option value="opmanis">Opmanis sequence</option>
+                <option value="empty">One more sequence</option>
             </select>
             <br>
             <label for="laste">Last element: </label>
-            <input type="number" id="laste">
+            <input type="number" class="laste">
             <br>
-            <input type="submit" value="Calculate">
+            <input type="button" value="Calculate" class="submit">
             <br>
             <p class="caption">Result: </p>
             <output name="result">
-                <textarea placeholder="Elements of sequence: "></textarea>
+                <textarea placeholder="Elements of sequence: " class="out_result"></textarea>
             </output>
         </form>
+        <script src="sequences.js"></script>
     </body>
 </html>
