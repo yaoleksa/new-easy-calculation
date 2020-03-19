@@ -132,5 +132,11 @@ function calculate() {
         case "prime":
             sequenceOutput.innerHTML = prime(parseInt(lastElement.value));
             break;
+        case "nonprime":
+            sequenceOutput.innerHTML = nonprime(lastElement.value);
+            break;
+        case "fibonacci":
+            sequenceOutput.innerHTML = fibonacci(lastElement.value);
+            break;
     }
 }
