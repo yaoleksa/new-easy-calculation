@@ -74,6 +74,7 @@ function setMtx() {
             const numberInput = document.createElement('input');
             numberInput.setAttribute('type', 'number');
             numberInput.setAttribute('class', 'number_value');
+            numberInput.value = 0;
             numLable.appendChild(numberInput);
             inputField.appendChild(numLable);
             break;
@@ -89,7 +90,17 @@ function multiplicateOnNumber() {
     for(let i=0; i<parseInt(numberOfRows.value); ++i) {
         for(let j=0; j<parseInt(numberOfColumns.value); ++j) {
             arr.push(mlt * parseFloat(document
-                .querySelector('.' + 'A' +String(i) + String(j)).value));
+                .querySelector('.A' + String(i) + String(j)).value));
+        }
+    }
+    return arr;
+}
+
+function transpone() {
+    const arr = [];
+    for(let i = 0; i<parseInt(numberOfColumns.value); ++i) {
+        for(let j = 0; j<parseInt(numberOfRows.value); ++j) {
+            arr.push(parseFloat(document.querySelector('.A' + String(j) + String(i)).value));
         }
     }
     return arr;
@@ -97,17 +108,27 @@ function multiplicateOnNumber() {
 
 function calculate() {
     outputField.innerHTML = '';
+    let res, rarr;
     switch(operation.value) {
         case "of num":
-            let res;
-            let rarr = multiplicateOnNumber();
-            
+            rarr = multiplicateOnNumber();
             for(let i = 0; i<parseInt(numberOfColumns.value)*parseInt(numberOfRows.value); ++i) {
                 res = document.createElement('input');
                 res.value = rarr[i];
                 outputField.appendChild(res);
-                (i+1)%parseInt(numberOfColumns.value) === 0 ? outputField.
+                (i+1) % parseInt(numberOfColumns.value) === 0 ? outputField.
                 appendChild(document.createElement("br")):{};
             }
+            break;
+        case "transpone":
+            rarr = transpone();
+            for(let i = 0; i<parseInt(numberOfColumns.value) * parseInt(numberOfRows.value); ++i) {
+                res = document.createElement('input');
+                res.value = rarr[i];
+                outputField.appendChild(res);
+                (i+1) % parseInt(numberOfRows.value) === 0 ? outputField.
+                appendChild(document.createElement("br")):{};
+            }
+            break;
     }
 }
