@@ -2,6 +2,7 @@ const numberOfRows = document.querySelector('.rows');
 const numberOfColumns = document.querySelector('.columns');
 const operation = document.querySelector('.operation');
 const inputField = document.querySelector('.input_field');
+const outputField = document.querySelector('.output_field');
 const confirm = document.querySelector('.confirm').addEventListener('click', setMtx);
 const result = document.querySelector('.get_res').addEventListener('click', calculate);
 
@@ -15,6 +16,7 @@ function createMatrix(label ,rows, columns) {
             row = document.createElement('input');
             row.setAttribute('type', 'number');
             row.setAttribute('class', label+String(i)+String(j));
+            row.value = 0;
             inputField.appendChild(row);
         }
         inputField.appendChild(document.createElement("br"));
@@ -94,5 +96,18 @@ function multiplicateOnNumber() {
 }
 
 function calculate() {
-    alert(multiplicateOnNumber());
+    outputField.innerHTML = '';
+    switch(operation.value) {
+        case "of num":
+            let res;
+            let rarr = multiplicateOnNumber();
+            
+            for(let i = 0; i<parseInt(numberOfColumns.value)*parseInt(numberOfRows.value); ++i) {
+                res = document.createElement('input');
+                res.value = rarr[i];
+                outputField.appendChild(res);
+                (i+1)%parseInt(numberOfColumns.value) === 0 ? outputField.
+                appendChild(document.createElement("br")):{};
+            }
+    }
 }

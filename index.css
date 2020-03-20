@@ -115,7 +115,7 @@ span.uppertab a {
     display: inline-block;
     margin-top: 15px;
 }
-.number_value, .degree_value, .input_field input {
+.number_value, .degree_value, .input_field input, .output_field input {
     width: 45px;
 }
 @media (min-width: 500px) {
