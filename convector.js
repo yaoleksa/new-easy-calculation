@@ -16,6 +16,6 @@ function calculate() {
     }
     result.innerHTML = (amount.value + ' ' +
         inputMeasure.value + 's' + ' ' + 'is equal' + ' ' +
-        (parseFloat(amount.value)*parseFloat(coefficient.value)).toFixed(3) +
+        parseFloat(amount.value)*parseFloat(coefficient.value) +
         ' ' + outputMeasure.value + 's.');
 }
