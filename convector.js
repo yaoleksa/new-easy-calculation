@@ -8,8 +8,14 @@ const result = document.querySelector('.res_calc');
 function calculate() {
     inputMeasure.value === '' ? alert("You should set input measure!"):{};
     outputMeasure.value === '' ? alert("You should set output measure!"):{};
-    coefficient.value === '' ? alert("You should set coefficient value!"):{}; 
+    coefficient.value === '' ? alert("You should set coefficient value!"):{};
+    if(coefficient.value.includes(',')) {
+        coefficient.value = coefficient.value.split('');
+        coefficient.value[coefficient.value.indexOf(',')] = '.';
+        coefficient.value = coefficient.value.join('');
+    }
     result.innerHTML = (amount.value + ' ' +
         inputMeasure.value + 's' + ' ' + 'is equal' + ' ' +
-        parseFloat(amount.value)*parseFloat(coefficient.value) + ' ' + outputMeasure.value + 's.');
+        (parseFloat(amount.value)*parseFloat(coefficient.value)).toFixed(3) +
+        ' ' + outputMeasure.value + 's.');
 }
