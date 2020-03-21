@@ -166,21 +166,17 @@ function subtract() {
     return arr;
 }
 
-function determinant() {
+function multiplicate() {
     if(numberOfRows.value !== numberOfColumns.value) {
-        alert("The matrix determinant can only be found for square matrix!");
+        alert("Number of rows should be equal number of columns!");
         return;
     }
-    const arr = [];
-    const mtx = []
-    for(let i = 0; i<parseInt(numberOfRows.vlaue); ++i) {
-        for(let j = 0; j<parseInt(numberOfColumns.value); ++j) {
-            arr.push(document.querySelector('.A' + String(i) + String(j)));
-        }
-        mtx.push(arr);
-        arr = [];
+    const matrixA = [], matrixB = [], resultMatrix = [];
+    let sum = 0, i = 0, j = 0;
+    while(i<parseInt(numberOfRows.value)*parseInt(numberOfColumns.value)) {
+        
     }
-    return math.det(mtx);
+    return resultMatrix;
 }
 
 function setResult(fn) {
@@ -217,9 +213,8 @@ function calculate() {
         case "subtract":
             setResult(subtract());
             break;
-        case "determinant":
-            const para = document.createElement('p');
-            const div = document.createElement('div');
-            div.innerHTML = "Determinant of matrix = " + determinant();
+        case "multiplicate":
+            setResult(multiplicate());
+            break;
     }
 }
