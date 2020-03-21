@@ -167,8 +167,10 @@ function subtract() {
 }
 
 function determinant() {
-    numberOfColumns.value !== numberOfRows.value ?
-    alert("The matrix determinant can only be found for a square matrix!"):{};
+    if(numberOfRows.value !== numberOfColumns.value) {
+        alert("The matrix determinant can only be found for square matrix!");
+        return;
+    }
     const arr = [];
     const mtx = []
     for(let i = 0; i<parseInt(numberOfRows.vlaue); ++i) {
@@ -178,7 +180,7 @@ function determinant() {
         mtx.push(arr);
         arr = [];
     }
-    return 
+    return math.det(mtx);
 }
 
 function setResult(fn) {
@@ -215,5 +217,9 @@ function calculate() {
         case "subtract":
             setResult(subtract());
             break;
+        case "determinant":
+            const para = document.createElement('p');
+            const div = document.createElement('div');
+            div.innerHTML = "Determinant of matrix = " + determinant();
     }
 }
