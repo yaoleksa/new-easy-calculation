@@ -166,6 +166,21 @@ function subtract() {
     return arr;
 }
 
+function determinant() {
+    numberOfColumns.value !== numberOfRows.value ?
+    alert("The matrix determinant can only be found for a square matrix!"):{};
+    const arr = [];
+    const mtx = []
+    for(let i = 0; i<parseInt(numberOfRows.vlaue); ++i) {
+        for(let j = 0; j<parseInt(numberOfColumns.value); ++j) {
+            arr.push(document.querySelector('.A' + String(i) + String(j)));
+        }
+        mtx.push(arr);
+        arr = [];
+    }
+    return 
+}
+
 function setResult(fn) {
     let res, rarr;
     rarr = fn;
