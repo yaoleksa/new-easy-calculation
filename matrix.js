@@ -6,6 +6,8 @@ const outputField = document.querySelector('.output_field');
 const confirm = document.querySelector('.confirm').addEventListener('click', setMtx);
 const result = document.querySelector('.get_res').addEventListener('click', calculate);
 
+let randomValues;
+
 function createMatrix(label ,rows, columns) {
     const capt = document.createElement('caption');
     capt.innerHTML = "Input matrix "+label;
@@ -21,6 +23,14 @@ function createMatrix(label ,rows, columns) {
         }
         inputField.appendChild(document.createElement("br"));
     }
+}
+
+function createRandomButton() {
+    const randomButton = document.createElement('button');
+    randomButton.setAttribute('class', 'randomButton');
+    randomButton.setAttribute('type', 'button');
+    randomButton.innerHTML = "Set random values";
+    inputField.appendChild(randomButton);
 }
 
 function setMtx() {
@@ -82,6 +92,25 @@ function setMtx() {
             createMatrix('A', parseInt(numberOfRows.value), parseInt(numberOfColumns.value));
             break;
     }
+    createRandomButton();
+    randomValues = document.querySelector('.randomButton').addEventListener('click', randomize);
+}
+
+function randomize() {
+    for(let i = 0; i<parseInt(numberOfRows.value); ++i) {
+        for(let j = 0; j<parseInt(numberOfColumns.value); ++j) {
+            document.querySelector('.A'+String(i)+String(j)).value = 
+            (75 * Math.random() - 75 * Math.random()).toFixed(3);
+        }
+    }
+    if(document.querySelector('.B'+'0'+'0') !== null) {
+        for(let i = 0; i<parseInt(numberOfRows.value); ++i) {
+            for(let j = 0; j<parseInt(numberOfColumns.value); ++j) {
+                document.querySelector('.B'+String(i)+String(j)).value = 
+                (75 * Math.random() - 75 * Math.random()).toFixed(3);
+            }
+        }
+    }  
 }
 
 function multiplicateOnNumber() {
@@ -89,8 +118,11 @@ function multiplicateOnNumber() {
     const arr = [];
     for(let i=0; i<parseInt(numberOfRows.value); ++i) {
         for(let j=0; j<parseInt(numberOfColumns.value); ++j) {
-            arr.push(mlt * parseFloat(document
-                .querySelector('.A' + String(i) + String(j)).value));
+            arr.push(
+                (mlt * parseFloat(document
+                .querySelector('.A' + String(i) + String(j)).value))
+                .toFixed(3)
+                );
         }
     }
     return arr;
@@ -106,19 +138,51 @@ function transpone() {
     return arr;
 }
 
+function add() {
+    const arr = [];
+    for(let i = 0; i < parseInt(numberOfRows.value); ++i) {
+        for(let j = 0; j<parseInt(numberOfColumns.value); ++j) {
+            arr.push(
+            (parseFloat(document.querySelector('.A' + String(i) + String(j)).value) +
+            parseFloat(document.querySelector('.B' + String(i) + String(j)).value))
+            .toFixed(3)
+            );
+        }
+    }
+    return arr;
+}
+
+function subtract() {
+    const arr = [];
+    for(let i = 0; i < parseInt(numberOfRows.value); ++i) {
+        for(let j = 0; j<parseInt(numberOfColumns.value); ++j) {
+            arr.push(
+            (parseFloat(document.querySelector('.A' + String(i) + String(j)).value) -
+            parseFloat(document.querySelector('.B' + String(i) + String(j)).value))
+            .toFixed(3)
+            );
+        }
+    }
+    return arr;
+}
+
+function setResult(fn) {
+    let res, rarr;
+    rarr = fn;
+    for(let i = 0; i<parseInt(numberOfColumns.value)*parseInt(numberOfRows.value); ++i) {
+        res = document.createElement('input');
+        res.value = rarr[i];
+        outputField.appendChild(res);
+        (i+1) % parseInt(numberOfColumns.value) === 0 ? outputField.
+        appendChild(document.createElement("br")):{};
+    }
+}
+
 function calculate() {
     outputField.innerHTML = '';
-    let res, rarr;
     switch(operation.value) {
         case "of num":
-            rarr = multiplicateOnNumber();
-            for(let i = 0; i<parseInt(numberOfColumns.value)*parseInt(numberOfRows.value); ++i) {
-                res = document.createElement('input');
-                res.value = rarr[i];
-                outputField.appendChild(res);
-                (i+1) % parseInt(numberOfColumns.value) === 0 ? outputField.
-                appendChild(document.createElement("br")):{};
-            }
+            setResult(multiplicateOnNumber());
             break;
         case "transpone":
             rarr = transpone();
@@ -129,6 +193,12 @@ function calculate() {
                 (i+1) % parseInt(numberOfRows.value) === 0 ? outputField.
                 appendChild(document.createElement("br")):{};
             }
+            break;
+        case "add":
+            setResult(add());
+            break;
+        case "subtract":
+            setResult(subtract());
             break;
     }
 }

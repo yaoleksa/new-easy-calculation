@@ -115,8 +115,13 @@ span.uppertab a {
     display: inline-block;
     margin-top: 15px;
 }
+.randomButton {
+    display: inline-block;
+    margin-left: 15px;
+    margin-top: 15px;
+}
 .number_value, .degree_value, .input_field input, .output_field input {
-    width: 45px;
+    width: 65px;
 }
 @media (min-width: 500px) {
         nav img {
