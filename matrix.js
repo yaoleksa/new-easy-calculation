@@ -171,10 +171,17 @@ function multiplicate() {
         alert("Number of rows should be equal number of columns!");
         return;
     }
-    const matrixA = [], matrixB = [], resultMatrix = [];
-    let sum = 0, i = 0, j = 0;
-    while(i<parseInt(numberOfRows.value)*parseInt(numberOfColumns.value)) {
-        
+    let row = 0, sum = 0, i = 0, j = 0, resultMatrix = [];
+    while(row < parseInt(numberOfRows.value)) {
+        sum += parseFloat(document.querySelector('.A' + String(row) + String(i)).value) *
+        parseFloat(document.querySelector('.B' + String(i) + String(j)).value);
+        ++i;
+        if(i === parseInt(numberOfRows.value)) {
+            ++j, i = 0, resultMatrix.push(sum.toFixed(3)), sum = 0;
+        }
+        if(j === parseInt(numberOfColumns.value)) {
+            ++row, j = 0;
+        }
     }
     return resultMatrix;
 }
