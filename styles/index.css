@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope&display=swap");
 html {
-    background-image: url('images/background-icon.PNG');
+    background-image: url('../images/background-icon.PNG');
 }
 body {
     max-width: 900px;
