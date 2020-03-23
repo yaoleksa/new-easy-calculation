@@ -109,6 +109,9 @@ form label {
     font-family: 'Annie Use Your Telescope';
     font-weight: bold;
 }
+td {
+    text-align: right;
+}
 textarea {
     border: 2px solid gray;
     border-radius: 7px;
@@ -118,7 +121,7 @@ textarea {
 }
 textarea.res_calc {
     height: 100px;
-    width: 550px;
+    width: 250px;
 }
 .graph {
     border: 1px solid grey;
