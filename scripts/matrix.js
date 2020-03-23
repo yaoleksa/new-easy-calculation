@@ -52,26 +52,9 @@ function setMtx() {
         createMatrix('A', parseInt(numberOfRows.value), parseInt(numberOfColumns.value));
         createMatrix('B', parseInt(numberOfRows.value), parseInt(numberOfColumns.value));
         break;
-    case "range":
-        createMatrix('A', parseInt(numberOfRows.value), parseInt(numberOfColumns.value));
-        break;
-    case "determinant":
-        createMatrix('A', parseInt(numberOfRows.value), parseInt(numberOfColumns.value));
-        break;
     case "subtract":
         createMatrix('A', parseInt(numberOfRows.value), parseInt(numberOfColumns.value));
         createMatrix('B', parseInt(numberOfRows.value), parseInt(numberOfColumns.value));
-        break;
-    case "power":
-        createMatrix('A', parseInt(numberOfRows.value), parseInt(numberOfColumns.value));
-        const powerLable = document.createElement('lable');
-        powerLable.setAttribute('class', 'lable_of_')
-        powerLable.innerHTML = "Degree: ";
-        const powerInput = document.createElement('input');
-        powerInput.setAttribute('type', 'number');
-        powerInput.setAttribute('class', 'degree_value');
-        powerLable.appendChild(powerInput);
-        inputField.appendChild(powerLable);
         break;
     case "transpone":
         createMatrix('A', parseInt(numberOfRows.value), parseInt(numberOfColumns.value));
@@ -87,9 +70,6 @@ function setMtx() {
         numberInput.value = 0;
         numLable.appendChild(numberInput);
         inputField.appendChild(numLable);
-        break;
-    case "convert":
-        createMatrix('A', parseInt(numberOfRows.value), parseInt(numberOfColumns.value));
         break;
     }
     createRandomButton();
