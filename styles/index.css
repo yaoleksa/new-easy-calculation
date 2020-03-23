@@ -114,6 +114,11 @@ textarea {
     border-radius: 7px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 17px;
+    height: 570px;
+}
+textarea.res_calc {
+    height: 100px;
+    width: 550px;
 }
 .graph {
     border: 1px solid grey;
@@ -142,7 +147,11 @@ span.uppertab a {
     margin-top: 15px;
 }
 .number_value, .degree_value, .input_field input, .output_field input {
-    width: 65px;
+    width: 85px;
+}
+.input_field caption {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 17px;
 }
 /* Start From Internet */
 
