@@ -7,7 +7,7 @@ body {
     margin: auto;
     text-shadow: rgb(0, 255, 21) 1px 0 10px;
 }
-nav{
+nav {
     font-family: 'Helvetica';
     font-style: italic;
     text-align: center;
@@ -18,7 +18,7 @@ nav span {
     text-shadow: rgb(0, 255, 21) 1px 0 10px;
     margin-left: 15px;
 }
-nav img{
+nav img {
     margin-bottom: 15px;
     margin-left: 15px;
 }
@@ -49,7 +49,6 @@ h1 {
     width: 90px;
     height: 90px;
 }
-
 .cap {
     color: red;
     text-align: center;
@@ -93,7 +92,29 @@ form {
     margin-top: 10%;
     margin-bottom: 25%;
 }
-
+form input:not([type=button]) {
+    border: 2px solid grey;
+    border-radius: 4px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 17px;
+}
+form select {
+    border: 2px solid grey;
+    border-radius: 4px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 17px;
+}
+form label {
+    font-size: 25px;
+    font-family: 'Annie Use Your Telescope';
+    font-weight: bold;
+}
+textarea {
+    border: 2px solid gray;
+    border-radius: 7px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 17px;
+}
 .graph {
     border: 1px solid grey;
     height: 100%;
