@@ -37,22 +37,28 @@
         <h2>Sequences</h2>
         <form>
             <p class="caption">Input</p>
-            <label for="stype">Sequence type:</label>
-            <select class="stype" id="stype">
-                <option value="prime">Prime numbers</option>
-                <option value="nonprime">Nonprime numbers</option>
-                <option value="fibonacci">Fibonacci sequences</option>
-                <option value="recaman">Recamán's sequence</option>
-                <option value="catalan">The Catalan numbers</option>
-                <option value="perfect">Perfect numbers</option>
-                <option value="totient">Euler totient</option>
-                <option value="opmanis">Opmanis sequence</option>
-                <option value="binary">Binary subtraction</option>
-            </select>
-            <br>
-            <label for="laste">Last element: </label>
-            <input type="number" class="laste" id="laste">
-            <br>
+            <table>
+                <tr>
+                    <td><label for="stype">Sequence type: </label></td>
+                    <td>
+                        <select class="stype" id="stype">
+                            <option value="prime">Prime numbers</option>
+                            <option value="nonprime">Nonprime numbers</option>
+                            <option value="fibonacci">Fibonacci sequences</option>
+                            <option value="recaman">Recamán's sequence</option>
+                            <option value="catalan">The Catalan numbers</option>
+                            <option value="perfect">Perfect numbers</option>
+                            <option value="totient">Euler totient</option>
+                            <option value="opmanis">Opmanis sequence</option>
+                            <option value="binary">Binary subtraction</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="laste">Last element: </label></td>
+                    <td><input type="number" class="laste" id="laste"></td>
+                </tr>
+            </table>
             <input type="button" value="Calculate" class="submit">
             <br>
             <p class="caption">Result: </p>

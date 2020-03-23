@@ -37,15 +37,20 @@
         <h2>Function</h2>
         <form>
             <p class="caption">Input</p>
-            <label for="f(x)">f(x)= </label>
-            <input type="text" id="f(x)" placeholder="1.2*x+4.9" class="equation">
-            <br>
-            <label for="beginning">Beginning: </label>
-            <input type="number" id="beginning" class="beginning">
-            <br>
-            <label for="end">End: </label>
-            <input type="number" id="end" class="end">
-            <br>
+            <table>
+                <tr>
+                    <td><label for="f(x)">f(x)= </label></td>
+                    <td><input type="text" id="f(x)" placeholder="1.2*x+4.9" class="equation"></td>
+                </tr>
+                <tr>
+                    <td><label for="beginning">Beginning: </label></td>
+                    <td><input type="number" id="beginning" class="beginning"></td>
+                </tr>
+                <tr>
+                    <td><label for="end">End: </label></td>
+                    <td><input type="number" id="end" class="end"></td>
+                </tr>
+            </table>
             <input type="button" value="Calculate" class="calculate">
             <br>
             <p class="caption">Result</p>

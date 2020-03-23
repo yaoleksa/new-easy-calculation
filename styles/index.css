@@ -103,6 +103,7 @@ form select {
     border-radius: 4px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 17px;
+    width: 190px;
 }
 form label {
     font-size: 25px;

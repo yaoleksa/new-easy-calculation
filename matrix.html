@@ -36,17 +36,28 @@
         </nav>
         <h2>Matrix</h2>
         <form>
-            <label for="rows">Rows: </label>
-            <input type="number" id="rows" class="rows">
-            <label for="columns">Columns: </label>
-            <input type="number" id="columns" class="columns">
-            <select class="operation">
-                <option value="multiplicate">Multiplicate</option>
-                <option value="add">Add</option>
-                <option value="subtract">Subtract matrix</option>
-                <option value="transpone">Transpone matrix</option>
-                <option value="of num">Multiplication on number</option>
-            </select>
+            <table>
+                <tr>
+                    <td><label for="rows">Rows: </label></td>
+                    <td><input type="number" id="rows" class="rows"></td>
+                </tr>
+                <tr>
+                    <td><label for="columns">Columns: </label></td>
+                    <td><input type="number" id="columns" class="columns"></td>
+                </tr>
+                <tr>
+                    <td><label for="operation">Operation: </label></td>
+                    <td>
+                        <select id="operation" class="operation">
+                            <option value="multiplicate">Multiplicate</option>
+                            <option value="add">Add</option>
+                            <option value="subtract">Subtract matrix</option>
+                            <option value="transpone">Transpone matrix</option>
+                            <option value="of num">Multiplication on number</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
             <input type="button" value="Confirm" class="confirm">
             <br>
             <p class="caption">Input: </p>
